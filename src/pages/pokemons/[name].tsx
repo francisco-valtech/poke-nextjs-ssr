@@ -20,9 +20,9 @@ const Porygon = (props: PokemonApi) => {
   if (router.isFallback) {
     return <div>Loading......I had to fetch incrementally!!</div>;
   }
-
-  const pokeName = props.data.species.name.charAt(0).toUpperCase() + props.data.species.name.slice(1)
-  
+  const pokeName = ""
+  // const pokeName = props.data.species.name.charAt(0).toUpperCase() + props.data.species.name.slice(1)
+  // console.log("pokeName", pokeName)
   return (
     <>
     <section className="container">
@@ -53,13 +53,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
       data,
       date: new Date().toISOString(),
     },
-    revalidate: 5
+    revalidate: 30
   }
 };
 
 export const getStaticPaths: GetStaticPaths<{ name: string }> = async () => {
 
-  const pokemons = await getPokemons(25) as Pokedex
+  const pokemons = await getPokemons(1) as Pokedex
   
   const paths = pokemons.results.map((pokemon) => {
     return { params: { name: pokemon.name.toString() } };

@@ -17,7 +17,7 @@ const PokemonsPage = (props: PokeDexApi) => {
   return (
     <>
       <Head>
-        <title>PokéSSR - AWS Amplify</title>
+        <title>PokéSSR - AWS Amplify STAGING</title>
         <meta property="og:title" content="PokéSSR - AWS Amplify" key="title" />
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet" />
